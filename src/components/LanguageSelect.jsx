@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { IconButton, Menu, MenuItem, Box } from "@mui/material";
-import theme from "../theme.js";
 
 import FR from "../img/Icons/FR.png";
 import EN from "../img/Icons/EN.png";
@@ -26,11 +25,11 @@ export default function LanguageSelect({ onChangeLanguage }) {
     return (
         <Box
             component="div"
-            position="absolute"
-            top="10px"
-            right="10px"
-            display="inline-flex"
-            alignItems="center"
+            sx={{
+                position: "absolute",
+                top: "10px",
+                right: "10px",
+            }}
         >
             <IconButton
                 size="small"
@@ -59,16 +58,32 @@ export default function LanguageSelect({ onChangeLanguage }) {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
                 PaperProps={{
-                    elevation: 0,
+                    elevation: 3,
                     sx: {
-                        borderRadius: "10px",
-                        backgroundColor: theme.palette.background.dark,
+                        borderRadius: 3,
+                        backdropFilter: "blur(20px)",
+                        backgroundColor: "#ffffff2e",
+                        color: "rgba(0, 0, 0, 0.7)",
+                        boxShadow: 5,
+                        padding: 1,
                         overflow: "visible",
-                        "& .MuiAvatar-root": {
-                            width: 32,
-                            height: 32,
-                            ml: -0.5,
-                            mr: 1,
+                        "& .Mui-selected": {
+                            borderRadius: 2,
+                            backgroundColor: "rgba(0, 0, 0, 0.07)",
+                            textDecoration: "underline",
+                        },
+                        "& .Mui-selected:hover": {
+                            backgroundColor: "rgba(0, 0, 0, 0.07)",
+                            borderRadius: 2,
+                        },
+                        "& .MuiMenu-list": {
+                            borderRadius: 2,
+                            padding: 0,
+                        },
+                        "& .MuiMenuItem-root:hover": {
+                            borderRadius: 2,
+                            backgroundColor: "transparent;",
+                            textDecoration: "underline",
                         },
                     },
                 }}
@@ -80,18 +95,14 @@ export default function LanguageSelect({ onChangeLanguage }) {
                     horizontal: "right",
                     vertical: "bottom",
                 }}
-                MenuListProps={{
-                    style: {
-                        "& .Mui-selected": {
-                            backgroundColor: theme.palette.background.dark,
-                        },
-                    },
-                }}
             >
                 <MenuItem
                     value="en"
                     selected={selectedLanguage === "en"}
                     onClick={() => handleChangeLanguage("en")}
+                    sx={{
+                        fontWeight: "bolder",
+                    }}
                 >
                     <img
                         src={EN}
@@ -109,6 +120,12 @@ export default function LanguageSelect({ onChangeLanguage }) {
                     value="fr"
                     selected={selectedLanguage === "fr"}
                     onClick={() => handleChangeLanguage("fr")}
+                    sx={{
+                        fontWeight: "bolder",
+                        ":hover": {
+                            textDecoration: "underline",
+                        },
+                    }}
                 >
                     <img
                         src={FR}

@@ -1,22 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poiret+One&display=swap");
-body {
-    height: 100svh;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "lato";
-}
 
-#root {
-    height: 100svh;
-    display: flex;
-    align-items: center;
+body {
+    height: 100%;
     background-image: url(../src/img/index.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#root {
+    height: 100svh;
+    width: 100%;
+    padding: 3rem;
     background-blend-mode: overlay;
     background-color: rgba(255, 255, 255, 0.1);
-    box-sizing: border-box;
+    overflow: auto;
+}
+@media (max-width: 750px) {
+    #root {
+        padding: 2rem;
+    }
+}
+@media (max-width: 450px) {
+    #root {
+        padding: 1rem;
+    }
 }

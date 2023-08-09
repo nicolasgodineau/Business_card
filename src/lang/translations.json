@@ -1,0 +1,69 @@
+{
+    "fr": {
+        "description": {
+            "line1": "Développeur web",
+            "line2": "Photographe"
+        },
+        "city": "Montréal - Canada",
+        "callToAction": "Parle avec moi"
+    },
+    "en": {
+        "name": "Nicolas Godineau",
+        "description": {
+            "line1": "Web developer",
+            "line2": "Photographer"
+        },
+        "city": "Montreal - Canada",
+        "callToAction": "Speack with me"
+    },
+    "links": [
+        {
+            "lang": {
+                "en": "Website",
+                "fr": "Site web"
+            },
+            "icon": "webSiteIcon",
+            "href": "https://nicolasgodineau.com/"
+        },
+        {
+            "lang": {
+                "en": "Web CV",
+                "fr": "CV web"
+            },
+            "icon": "cvIcon",
+            "href": "https://itsme.nicolasgodineau.com/"
+        },
+        {
+            "lang": {
+                "en": "Github",
+                "fr": "Github"
+            },
+            "icon": "githubIcon",
+            "href": "https://github.com/nicolasgodineau"
+        },
+        {
+            "lang": {
+                "en": "LinkedIn",
+                "fr": "LinkedIn"
+            },
+            "icon": "linkedinIcon",
+            "href": "https://www.linkedin.com/in/nicolasgodineau/"
+        },
+        {
+            "lang": {
+                "en": "Landscape",
+                "fr": "Paysage"
+            },
+            "icon": "instagramIcon",
+            "href": "https://www.instagram.com/nicolasg_travel/"
+        },
+        {
+            "lang": {
+                "en": "Portrait",
+                "fr": "Portrait"
+            },
+            "icon": "instagramIcon",
+            "href": "https://www.instagram.com/nicolasg_portraits/"
+        }
+    ]
+}

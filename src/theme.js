@@ -7,22 +7,21 @@ const theme = createTheme({
     },
     spacing: 8,
     palette: {
-        primary: {
-            main: "#999999",
-        },
         background: {
-            dark: "#1f1f1f",
-            light: "#f9f9f9",
+            dark: "rgba(0, 0, 0, 0.7)",
+            light: "rgba(0, 0, 0, 0.5)",
         },
 
         text: {
-            primary: "#fff",
-            secondary: "#999999",
-            accent: "#28e98c",
+            primary: "rgba(0, 0, 0, 0.7)",
+            light: "#ffffffde",
         },
 
         accent: "#28e98c",
-        danger: "#e92828c4",
+        valid: "#83ff8573",
+        validLight: "#83ff8524",
+        danger: "#ff838373",
+        dangerLight: "#ff838324",
     },
     breakpoints: {
         values: {

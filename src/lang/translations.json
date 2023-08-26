@@ -5,7 +5,16 @@
             "line2": "Photographe"
         },
         "city": "Montréal - Canada",
-        "callToAction": "Parle avec moi"
+        "callToAction": "Contactez moi",
+        "formH1": "Écrivez-moi!",
+        "formName": "Votre nom et prénom",
+        "formEmail": "Votre e-mail",
+        "formText": "Votre message",
+        "formRequired": "Champ requis",
+        "formInvalidEmail": "Adresse e-mail invalide",
+        "formSendSucces": "Votre message a été envoyé avec succès !",
+        "formSubmit": "Envoyer",
+        "formClose": "Fermer"
     },
     "en": {
         "name": "Nicolas Godineau",
@@ -14,7 +23,16 @@
             "line2": "Photographer"
         },
         "city": "Montreal - Canada",
-        "callToAction": "Speack with me"
+        "callToAction": "Contact me",
+        "formH1": "Write to me!",
+        "formName": "Your first and last name",
+        "formEmail": "Your email",
+        "formText": "Your message",
+        "formRequired": "Required field",
+        "formInvalidEmail": "Invalid email address",
+        "formSendSucces": "Your message has been sent !",
+        "formSubmit": "Send",
+        "formClose": "Close"
     },
     "links": [
         {

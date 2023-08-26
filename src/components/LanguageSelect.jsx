@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import theme from "../theme.js";
+
 import { IconButton, Menu, MenuItem, Box } from "@mui/material";
 
 import FR from "../img/Icons/FR.png";
@@ -63,7 +65,7 @@ export default function LanguageSelect({ onChangeLanguage }) {
                         borderRadius: 3,
                         backdropFilter: "blur(20px)",
                         backgroundColor: "#ffffff2e",
-                        color: "rgba(0, 0, 0, 0.7)",
+                        color: theme.palette.text.primary,
                         boxShadow: 5,
                         padding: 1,
                         overflow: "visible",

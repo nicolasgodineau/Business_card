@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import translations from "../src/lang/translations.json";
 import theme from "../src/theme.js";
-import {
-    Container,
-    Avatar,
-    Box,
-    Typography,
-    Link,
-    Button,
-} from "@mui/material";
+import { Container, Avatar, Box, Typography, Button } from "@mui/material";
 import nicolas from "../src/img/Nicolas.webp";
 import webSiteIcon from "../src/img/globe.svg";
 import cvIcon from "../src/img/cv.svg";
@@ -16,6 +9,8 @@ import githubIcon from "../src/img/github.svg";
 import linkedinIcon from "../src/img/linkedin.svg";
 import instagramIcon from "../src/img/instagram.svg";
 import LanguageSelect from "./components/LanguageSelect.jsx";
+
+import ModalContact from "./components/ModalContact.jsx";
 
 export default function App() {
     // Section: multi langues
@@ -29,31 +24,8 @@ export default function App() {
 
     // Section: modal de contact
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const handleButtonClick = () => {
-        setIsModalOpen(true);
-    };
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-    };
-
-    // Section: formulaire de contact
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        text: "",
-    });
-
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            [name]: value,
-        }));
-    };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(formData); // Affiche les données du formulaire dans la console pour l'exemple
+    const toggleContent = () => {
+        setIsModalOpen(!isModalOpen);
     };
 
     // Section: Liens
@@ -95,9 +67,9 @@ export default function App() {
                 gap: 3,
                 padding: 2,
                 backdropFilter: "blur(20px)",
-                backgroundColor: "#ffffff2e",
+                backgroundColor: "rgba(255, 255, 255, 0.25)",
                 borderRadius: 5,
-                color: "rgba(0, 0, 0, 0.7)",
+                color: theme.palette.text.primary,
                 boxShadow: 7,
                 [theme.breakpoints.down("sm")]: {
                     flexDirection: "column",
@@ -112,27 +84,31 @@ export default function App() {
                 disableGutters={true}
                 sx={{
                     maxWidth: "300px",
+                    maxHeight: "300px",
+                    borderRadius: "50%",
+                    boxShadow:
+                        "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0, 0, 0, 0);",
                     [theme.breakpoints.down("sm")]: {
                         maxWidth: "200px",
+                        maxHeight: "200px",
                     },
                     [theme.breakpoints.down("xs")]: {
                         maxWidth: "150px",
+                        maxHeight: "150px",
                     },
                 }}
             >
-                <Box>
-                    <Avatar
-                        alt="Nicolas"
-                        src={nicolas}
-                        sx={{
-                            width: "100%",
-                            height: "100%",
-                            borderRadius: "50%",
-                            boxShadow:
-                                "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0, 0, 0, 0);",
-                        }}
-                    />
-                </Box>
+                <img
+                    src={nicolas}
+                    alt="Nicolas Godineau"
+                    style={{
+                        width: "100%",
+                        height: "100%",
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        objectPosition: "center",
+                    }}
+                />
             </Container>
             <Container
                 component="section"
@@ -166,10 +142,9 @@ export default function App() {
                         alignItems: "baseline",
                         justifyContent: "center",
                         flexWrap: "wrap",
-                        gap: "1rem",
+                        gap: 2,
                         margin: 0,
                         [theme.breakpoints.down("xs")]: {
-                            // Styles pour les écrans de largeur maximale "md" (1090px)
                             alignItems: "center",
                             flexDirection: "column",
                             gap: 0,
@@ -213,22 +188,24 @@ export default function App() {
             >
                 {translation.city}
             </Typography>
-            <Button
-                variant="contained"
-                sx={{
-                    backgroundColor: "rgba(0, 0, 0, 0.7)",
-                    color: "white",
-                    textTransform: "none",
-                    fontSize: "clamp(1rem, 4vw, 1.5rem)",
-                    letterSpacing: "1px",
-                    ":hover": {
-                        backgroundColor: "rgba(0, 0, 0, 0.5)",
-                    },
-                }}
-                onClick={handleButtonClick}
-            >
-                {translation.callToAction}
-            </Button>
+            {!isModalOpen && (
+                <Button
+                    variant="contained"
+                    sx={{
+                        backgroundColor: theme.palette.background.dark,
+                        color: theme.palette.text.light,
+                        textTransform: "none",
+                        fontSize: "clamp(1rem, 4vw, 1.5rem)",
+                        letterSpacing: "1px",
+                        ":hover": {
+                            backgroundColor: theme.palette.background.light,
+                        },
+                    }}
+                    onClick={toggleContent}
+                >
+                    {translation.callToAction}
+                </Button>
+            )}
             <Container
                 component="section"
                 maxWidth="sm"
@@ -241,76 +218,86 @@ export default function App() {
                     backdropFilter: "blur(20px)",
                     backgroundColor: "#ffffff2e",
                     borderRadius: 5,
-                    boxShadow: 4,
+                    boxShadow: isModalOpen ? 0 : 3,
                 }}
             >
-                <Box
-                    sx={{
-                        width: "100%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        gap: 2,
-                        padding: 2,
-                        [theme.breakpoints.down("sm")]: {
-                            width: "auto",
-                            flexDirection: "column",
-                            alignItems: "flex-start",
-                        },
-                    }}
-                >
-                    {Links.map((link, index) => (
-                        <Link
-                            key={index}
-                            href={link.href}
-                            target="_blank"
-                            onMouseEnter={handleHover}
-                            onMouseLeave={handleLeave}
-                            sx={{
-                                display: "flex",
+                {!isModalOpen ? (
+                    <Box
+                        sx={{
+                            width: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            gap: 1,
+                            padding: 2,
+                            [theme.breakpoints.down("sm")]: {
+                                width: "auto",
                                 flexDirection: "column",
-                                alignItems: "center",
-                                gap: 2,
-                                color: "rgba(0, 0, 0, 0.7)",
-                                textDecoration: "none",
-                                ":hover": {
-                                    textDecoration: "underline",
-                                },
-                                [theme.breakpoints.down("sm")]: {
-                                    flexDirection: "row",
+                                alignItems: "flex-start",
+                            },
+                        }}
+                    >
+                        {Links.map((link, index) => (
+                            <Button
+                                key={index}
+                                href={link.href}
+                                target="_blank"
+                                onMouseEnter={handleHover}
+                                onMouseLeave={handleLeave}
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "column",
                                     alignItems: "center",
-                                    justifyContent: "start",
+                                    justifyContent: "center",
                                     gap: 1,
-                                },
-                            }}
-                        >
-                            <Avatar
-                                alt={link.lang?.[language]}
-                                className="avatar"
-                                sx={{
-                                    width: 28,
-                                    height: 28,
-                                    cursor: "pointer",
-                                    [theme.breakpoints.down("xs")]: {
-                                        width: 22,
-                                        height: 22,
+                                    color: theme.palette.text.primary,
+                                    padding: 1,
+                                    textDecoration: "none",
+                                    ":hover": {
+                                        textDecoration: "underline",
                                     },
-                                    transition: "transform 0.3s ease",
-                                }}
-                                src={iconMappings[link.icon]}
-                            />
-                            <Typography
-                                sx={{
-                                    fontSize: "clamp(0.8rem, 4vw, 1rem)",
-                                    letterSpacing: "1px",
-                                    fontWeight: "bold",
+                                    [theme.breakpoints.down("sm")]: {
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "start",
+                                        gap: 1,
+                                        paddingX: 6,
+                                    },
                                 }}
                             >
-                                {link.lang?.[language]}
-                            </Typography>
-                        </Link>
-                    ))}
-                </Box>
+                                <Avatar
+                                    alt={link.lang?.[language]}
+                                    className="avatar"
+                                    sx={{
+                                        width: 28,
+                                        height: 28,
+                                        cursor: "pointer",
+                                        [theme.breakpoints.down("xs")]: {
+                                            width: 22,
+                                            height: 22,
+                                        },
+                                        transition: "transform 0.3s ease",
+                                    }}
+                                    src={iconMappings[link.icon]}
+                                />
+                                <Typography
+                                    sx={{
+                                        fontSize: "clamp(0.8rem, 4vw, 1rem)",
+                                        letterSpacing: "1px",
+                                        fontWeight: "bold",
+                                    }}
+                                >
+                                    {link.lang?.[language]}
+                                </Typography>
+                            </Button>
+                        ))}
+                    </Box>
+                ) : (
+                    <ModalContact
+                        translations={translation}
+                        toggleContent={toggleContent}
+                    />
+                )}
             </Container>
         </Container>
     );

@@ -78,38 +78,26 @@ export default function App() {
             }}
         >
             <LanguageSelect onChangeLanguage={handleChangeLanguage} />
-            <Container
-                component="section"
-                maxWidth={false}
-                disableGutters={true}
+            <Avatar
+                alt="Nicolas"
+                src={nicolas}
                 sx={{
-                    maxWidth: "300px",
-                    maxHeight: "300px",
-                    borderRadius: "50%",
+                    width: "250px",
+                    height: "250px",
+                    objectFit: "contain",
                     boxShadow:
                         "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0, 0, 0, 0);",
                     [theme.breakpoints.down("sm")]: {
-                        maxWidth: "200px",
-                        maxHeight: "200px",
+                        width: "200px",
+                        height: "200px",
                     },
                     [theme.breakpoints.down("xs")]: {
-                        maxWidth: "150px",
-                        maxHeight: "150px",
+                        width: "150px",
+                        height: "150px",
                     },
                 }}
-            >
-                <img
-                    src={nicolas}
-                    alt="Nicolas Godineau"
-                    style={{
-                        width: "100%",
-                        height: "100%",
-                        borderRadius: "50%",
-                        objectFit: "cover",
-                        objectPosition: "center",
-                    }}
-                />
-            </Container>
+            />
+
             <Container
                 component="section"
                 sx={{
@@ -196,6 +184,7 @@ export default function App() {
                         color: theme.palette.text.light,
                         textTransform: "none",
                         fontSize: "clamp(1rem, 4vw, 1.5rem)",
+                        borderRadius: 5,
                         letterSpacing: "1px",
                         ":hover": {
                             backgroundColor: theme.palette.background.light,

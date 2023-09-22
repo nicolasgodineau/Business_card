@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Virtual Business Card
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my virtual business card! This digital card consolidates all the information you need to get in touch with me and explore my social networks. Using modern technologies, I've designed this card to provide a smooth and professional user experience.
 
-## Available Scripts
+## Technologies Used 🚀
 
-In the project directory, you can run:
+This project was developed using several cutting-edge technologies to ensure fast access and an elegant presentation. Here are some of the key technologies I utilized:
 
-### `npm start`
+- **React**: I chose React, a modern JavaScript framework, to build the interface of my virtual business card.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Material-UI (MUI)**: To ensure a polished look and consistency in user interface components, I integrated Material-UI. This greatly simplified the design process and added a touch of professionalism.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **AOS (Animate On Scroll)**: I incorporated the AOS JavaScript library to add elegant animations when scrolling the page. These animations provide an additional visual dimension to my card, making it more appealing to visitors. ✨
 
-### `npm test`
+- **i18next**: My virtual business card supports multiple languages thanks to i18next, a language management library. This allows an international audience to access my information and contact me.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Herotofu for the contact form**: I integrated Herotofu to create an interactive contact form. 📬
 
-### `npm run build`
+## Contact Information
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Below, you'll find all the information to get in touch with me and explore my social networks:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [LinkedIn](https://www.linkedin.com/in/nicolasgodineau/)
+- [Instagram Landscape](https://www.instagram.com/nicolasg_travel/)
+- [Instagram Portrait](https://www.instagram.com/nicolasg_portrait/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Feel free to reach out to me if you have any questions, collaboration opportunities, or just want to chat.
 
-### `npm run eject`
+Thank you for visiting my virtual business card! 👨‍💼
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+***
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Carte de Visite Virtuelle
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Bienvenue sur ma carte de visite virtuelle ! 
+Cette carte numérique regroupe toutes les informations nécessaires pour prendre contact avec moi et pour explorer mes réseaux sociaux. 
+Utilisant des technologies modernes, j'ai conçu cette carte pour offrir une expérience utilisateur fluide et professionnelle.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies Utilisées 🚀
 
-## Learn More
+Ce projet a été développé en utilisant plusieurs technologies de pointe pour garantir un accès rapide et une présentation élégante. Voici quelques-unes des technologies clés que j'ai employées :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React** : J'ai choisi React, un framework JavaScript moderne, pour construire l'interface de ma carte de visite virtuelle.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Material-UI (MUI)** : Pour garantir un aspect visuel soigné et une cohérence dans les composants de l'interface utilisateur, j'ai intégré Material-UI. Cela a grandement simplifié le processus de conception et a ajouté une touche de professionnalisme.
 
-### Code Splitting
+- **AOS (Animate On Scroll)** : J'ai incorporé la bibliothèque JavaScript AOS pour ajouter des animations élégantes lors du défilement de la page. Ces animations confèrent une dimension visuelle supplémentaire à ma carte, la rendant plus attractive pour les visiteurs. ✨
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **i18next** : Ma carte de visite virtuelle prend en charge plusieurs langues grâce à i18next, une bibliothèque de gestion de la langue. Cela permet à un public international d'accéder à mes informations et de me contacter.
 
-### Analyzing the Bundle Size
+-  **Herotofu pour le formulaire de contact** : J'ai intégré Herotofu pour créer un formulaire de contact interactif.📬
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Informations de Contact
 
-### Making a Progressive Web App
+Vous trouverez ci-dessous toutes les informations pour prendre contact avec moi et pour explorer mes réseaux sociaux :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [LinkedIn](https://www.linkedin.com/in/nicolasgodineau/)
+- [Instagram paysage](https://www.instagram.com/nicolasg_travel/)
+- [Instagram portrait](https://www.instagram.com/nicolasg_portrait/)
 
-### Advanced Configuration
+N'hésitez pas à me contacter si vous avez des questions, des opportunités de collaboration ou simplement pour discuter.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Merci pour votre visite sur ma carte de visite virtuelle ! 👨‍💼

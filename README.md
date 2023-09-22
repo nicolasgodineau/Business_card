@@ -10,8 +10,6 @@ This project was developed using several cutting-edge technologies to ensure fas
 
 - **Material-UI (MUI)**: To ensure a polished look and consistency in user interface components, I integrated Material-UI. This greatly simplified the design process and added a touch of professionalism.
 
-- **AOS (Animate On Scroll)**: I incorporated the AOS JavaScript library to add elegant animations when scrolling the page. These animations provide an additional visual dimension to my card, making it more appealing to visitors. ✨
-
 - **i18next**: My virtual business card supports multiple languages thanks to i18next, a language management library. This allows an international audience to access my information and contact me.
 
 - **Herotofu for the contact form**: I integrated Herotofu to create an interactive contact form. 📬
@@ -43,8 +41,6 @@ Ce projet a été développé en utilisant plusieurs technologies de pointe pour
 - **React** : J'ai choisi React, un framework JavaScript moderne, pour construire l'interface de ma carte de visite virtuelle.
 
 - **Material-UI (MUI)** : Pour garantir un aspect visuel soigné et une cohérence dans les composants de l'interface utilisateur, j'ai intégré Material-UI. Cela a grandement simplifié le processus de conception et a ajouté une touche de professionnalisme.
-
-- **AOS (Animate On Scroll)** : J'ai incorporé la bibliothèque JavaScript AOS pour ajouter des animations élégantes lors du défilement de la page. Ces animations confèrent une dimension visuelle supplémentaire à ma carte, la rendant plus attractive pour les visiteurs. ✨
 
 - **i18next** : Ma carte de visite virtuelle prend en charge plusieurs langues grâce à i18next, une bibliothèque de gestion de la langue. Cela permet à un public international d'accéder à mes informations et de me contacter.
 

@@ -6,6 +6,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: "lato";
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #root {
@@ -19,4 +20,12 @@ body {
     background-blend-mode: overlay;
     background-color: rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
+}
+
+fieldset.MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.7);
+}
+
+label.MuiFormLabel-root {
+    color: rgba(0, 0, 0, 0.7);
 }

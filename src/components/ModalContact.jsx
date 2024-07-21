@@ -123,6 +123,9 @@ export default function ContactModal({ toggleContent, dimensions }) {
                                 {...field}
                                 sx={{
                                     backgroundColor: "#2a2a2a",
+                                    [theme.breakpoints.down("sm")]: {
+                                        padding: "3rem",
+                                    },
                                 }}
                             />
                         )}

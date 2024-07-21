@@ -10,6 +10,9 @@ const theme = createTheme({
         primary: {
             main: "#999999",
         },
+        secondary: {
+            main: '#28e98c'
+        },
         background: {
             dark: "#1f1f1f",
             light: "#f9f9f9",
@@ -19,6 +22,12 @@ const theme = createTheme({
             primary: "#fff",
             secondary: "#999999",
             accent: "#28e98c",
+        },
+        input: {
+            main: '#fff',
+            light: '#E9DB5D',
+            dark: '#A29415',
+            contrastText: '#242105',
         },
 
         accent: "#28e98c",

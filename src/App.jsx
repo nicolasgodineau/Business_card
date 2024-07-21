@@ -62,8 +62,6 @@ export default function App() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Vous pouvez ajouter ici la logique pour soumettre le formulaire
-        console.log(formData); // Affiche les données du formulaire dans la console pour l'exemple
     };
 
     // Section: info bulle
@@ -82,7 +80,8 @@ export default function App() {
         <ThemeProvider theme={theme}>
             <CssBaseline>
                 <Container
-                    disableGutters={true}
+                    component="main"
+                    disableGutters={false}
                     maxWidth="sm"
                     sx={{
                         display: "flex",
@@ -100,23 +99,27 @@ export default function App() {
                         />
                     )}
                     <Avatar
+                        component="aside"
                         alt="Nicolas"
                         variant="square"
                         src={nicolas}
                         sx={{
                             width: 300,
+                            minWidth: 300,
                             height: 300,
                             borderTopLeftRadius: "10px",
                             borderBottomLeftRadius: "10px",
                             [theme.breakpoints.down("sm")]: {
                                 width: "fit-content",
-                                borderRadius: "10px",
+                                borderRadius: "0px",
+                                borderTopLeftRadius: "10px",
                                 borderTopRightRadius: "10px",
-                                borderBottomLeftRadius: "10px",
+                                borderBottomLeftRadius: "0px",
                             },
                         }}
                     />
                     <Box
+                        component="section"
                         sx={{
                             width: "100%",
                             display: "flex",
@@ -147,13 +150,23 @@ export default function App() {
                         {/* Condition pour afficher la modal */}
                         {isModalOpen ? (
                             <form onSubmit={handleSubmit}>
-                                <Box sx={{ display: "flex" }}>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        gap: 3,
+                                        minWidth: 300,
+                                        padding: 1,
+                                    }}
+                                >
                                     <TextField
                                         name="name"
                                         label="Nom"
                                         value={formData.name}
                                         onChange={handleChange}
                                         fullWidth
+                                        size={
+                                            isMobileScreen ? "small" : "medium"
+                                        }
                                         margin="normal"
                                         variant="outlined"
                                     />
@@ -163,28 +176,65 @@ export default function App() {
                                         value={formData.email}
                                         onChange={handleChange}
                                         fullWidth
+                                        size={
+                                            isMobileScreen ? "small" : "medium"
+                                        }
                                         margin="normal"
                                         variant="outlined"
                                     />
                                 </Box>
-                                <TextField
-                                    name="text"
-                                    label="Texte"
-                                    value={formData.text}
-                                    onChange={handleChange}
-                                    multiline
-                                    rows={2}
-                                    fullWidth
-                                    margin="normal"
-                                    variant="outlined"
-                                />
-                                <Button
-                                    type="submit"
-                                    variant="contained"
-                                    color="primary"
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        gap: 3,
+                                        minWidth: 300,
+                                        padding: 1,
+                                    }}
                                 >
-                                    Soumettre
-                                </Button>
+                                    <TextField
+                                        name="text"
+                                        label="Texte"
+                                        value={formData.text}
+                                        onChange={handleChange}
+                                        multiline
+                                        rows={2}
+                                        fullWidth
+                                        color="input"
+                                        size={
+                                            isMobileScreen ? "small" : "medium"
+                                        }
+                                        margin="normal"
+                                        variant="outlined"
+                                    />
+                                </Box>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        gap: 3,
+                                        minWidth: 300,
+                                        padding: 1,
+                                    }}
+                                >
+                                    <Button
+                                        variant="contained"
+                                        sx={{
+                                            backgroundColor:
+                                                "rgba(0, 0, 0, 0.7)",
+                                            color: "white",
+                                            textTransform: "none",
+                                            fontSize: "1rem",
+                                            letterSpacing: "1px",
+                                            ":hover": {
+                                                backgroundColor:
+                                                    "rgba(0, 0, 0, 0.5)",
+                                            },
+                                        }}
+                                        onClick={handleCloseModal}
+                                    >
+                                        {translation.send}
+                                    </Button>
+                                </Box>
                             </form>
                         ) : (
                             <>
@@ -225,23 +275,24 @@ export default function App() {
                                         {translation.city}
                                     </Typography>
                                 </Box>
-                                {/*                             <Button
-                                variant="contained"
-                                sx={{
-                                    backgroundColor: "rgba(0, 0, 0, 0.7)",
-                                    color: "white",
-                                    textTransform: "none",
-                                    fontSize: "1rem",
-                                    letterSpacing: "1px",
-                                    ":hover": {
-                                        backgroundColor: "rgba(0, 0, 0, 0.5)",
-                                    },
-                                }}
-                                onClick={handleButtonClick}
-                            >
-                                Speack with me
-                            </Button>
- */}
+                                <Button
+                                    variant="contained"
+                                    sx={{
+                                        backgroundColor: "rgba(0, 0, 0, 0.7)",
+                                        color: "white",
+                                        textTransform: "none",
+                                        fontSize: "1rem",
+                                        letterSpacing: "1px",
+                                        ":hover": {
+                                            backgroundColor:
+                                                "rgba(0, 0, 0, 0.5)",
+                                        },
+                                    }}
+                                    onClick={handleButtonClick}
+                                >
+                                    {translation.contact}
+                                </Button>
+
                                 <List sx={{ width: "100%", display: "flex" }}>
                                     <ListItem
                                         sx={{

@@ -254,6 +254,9 @@ export default function App() {
                                             fontSize: "2rem",
                                             letterSpacing: "2px",
                                             fontWeight: "bold",
+                                            fontFamily:
+                                                theme.typography
+                                                    .fontFamilyPoiretOne,
                                         }}
                                     >
                                         {translation.name}
@@ -262,6 +265,9 @@ export default function App() {
                                         sx={{
                                             letterSpacing: "1px",
                                             fontWeight: "bold",
+                                            fontFamily:
+                                                theme.typography
+                                                    .fontFamilyPoiretOne,
                                         }}
                                     >
                                         {translation.job}
@@ -270,6 +276,9 @@ export default function App() {
                                         sx={{
                                             letterSpacing: "1px",
                                             fontWeight: "bold",
+                                            fontFamily:
+                                                theme.typography
+                                                    .fontFamilyPoiretOne,
                                         }}
                                     >
                                         {translation.city}
@@ -278,14 +287,16 @@ export default function App() {
                                 <Button
                                     variant="contained"
                                     sx={{
-                                        backgroundColor: "rgba(0, 0, 0, 0.7)",
+                                        backgroundColor: "rgba(0, 0, 0, 0.4)",
                                         color: "white",
                                         textTransform: "none",
                                         fontSize: "1rem",
                                         letterSpacing: "1px",
+                                        borderRadius: 5,
+                                        padding: "10px 42px",
                                         ":hover": {
                                             backgroundColor:
-                                                "rgba(0, 0, 0, 0.5)",
+                                                "rgba(0, 0, 0, 0.6)",
                                         },
                                     }}
                                     onClick={handleButtonClick}
@@ -356,7 +367,7 @@ export default function App() {
                                             title="Web CV"
                                         >
                                             <Link
-                                                href="https://itsme.nicolasgodineau.com/"
+                                                href="https://cv.nicolasgodineau.com"
                                                 target="_blank"
                                             >
                                                 <Avatar

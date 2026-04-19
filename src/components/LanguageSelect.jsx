@@ -80,18 +80,23 @@ export default function LanguageSelect({ onChangeLanguage }) {
                     horizontal: "right",
                     vertical: "bottom",
                 }}
-                MenuListProps={{
-                    style: {
-                        "& .Mui-selected": {
-                            backgroundColor: theme.palette.background.dark,
-                        },
-                    },
-                }}
             >
                 <MenuItem
                     value="en"
                     selected={selectedLanguage === "en"}
                     onClick={() => handleChangeLanguage("en")}
+                    sx={{
+                        "&.Mui-selected": {
+                            backgroundColor: theme.palette.text.primary,
+                            color: theme.palette.background.dark,
+                            textDecoration: "underline",
+                            boxShadow: `0 0 10px ${theme.palette.text.accent}40`,
+                            "&:hover": {
+                                color: theme.palette.text.primary,
+                                backgroundColor: theme.palette.background.dark,
+                            },
+                        },
+                    }}
                 >
                     <img
                         src={EN}
@@ -109,6 +114,18 @@ export default function LanguageSelect({ onChangeLanguage }) {
                     value="fr"
                     selected={selectedLanguage === "fr"}
                     onClick={() => handleChangeLanguage("fr")}
+                    sx={{
+                        "&.Mui-selected": {
+                            backgroundColor: theme.palette.text.primary,
+                            color: theme.palette.background.dark,
+                            textDecoration: "underline",
+                            boxShadow: `0 0 10px ${theme.palette.text.accent}40`,
+                            "&:hover": {
+                                color: theme.palette.text.primary,
+                                backgroundColor: theme.palette.background.dark,
+                            },
+                        },
+                    }}
                 >
                     <img
                         src={FR}

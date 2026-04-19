@@ -1,52 +1,224 @@
-# Virtual Business Card
+# 👋 Virtual Business Card - Nicolas Godineau
 
-Welcome to my virtual business card! This digital card consolidates all the information you need to get in touch with me and explore my social networks. Using modern technologies, I've designed this card to provide a smooth and professional user experience.
+Welcome to my virtual business card! This digital portfolio consolidates all the information you need to get in touch with me and explore my social networks. Using modern technologies, I've designed this card to provide a smooth and professional user experience.
 
-## Technologies Used 🚀
+## ✨ Features
 
-This project was developed using several cutting-edge technologies to ensure fast access and an elegant presentation. Here are some of the key technologies I utilized:
+- 🌐 **Multi-language Support**: English & French (i18next)
+- 🎨 **Modern Design**: Built with Material-UI for a polished look
+- 📱 **Responsive**: Works perfectly on mobile and desktop
+- 💬 **Contact Form**: Easy way to reach out
+- 🔗 **Social Links**: LinkedIn, GitHub, Instagram, and portfolio
+- ⚡ **Performance**: Optimized production build
 
-- **React**: I chose React, a modern JavaScript framework, to build the interface of my virtual business card.
+## 🚀 Technologies
 
-- **Material-UI (MUI)**: To ensure a polished look and consistency in user interface components, I integrated Material-UI. This greatly simplified the design process and added a touch of professionalism.
+- **React 18** - Modern UI library
+- **Material-UI (MUI)** - Component framework
+- **i18next** - Multi-language support
+- **React Hook Form** - Form management
+- **Emotion** - CSS-in-JS styling
 
-- **i18next**: My virtual business card supports multiple languages thanks to i18next, a language management library. This allows an international audience to access my information and contact me.
+## 🔗 Links
 
-- **Herotofu for the contact form**: I integrated Herotofu to create an interactive contact form. 📬
+- 🌍 **Website**:
+- 📄 **Web CV**:
+- 💼 **LinkedIn**:
+- 🐙 **GitHub**:
+- 📸 **Instagram Travel**:
+- 📸 **Instagram Portrait**:
 
-## Contact Information
+## 🚀 Quick Start
 
-Below, you'll find all the information to get in touch with me and explore my social networks:
+### Prerequisites
 
-- [LinkedIn](https://www.linkedin.com/in/nicolasgodineau/)
-- [Instagram Landscape](https://www.instagram.com/nicolasg_travel/)
-- [Instagram Portrait](https://www.instagram.com/nicolasg_portrait/)
+- Node.js 14+
+- npm or yarn
 
-Feel free to reach out to me if you have any questions, collaboration opportunities, or just want to chat.
+### Installation
 
-Thank you for visiting my virtual business card! 👨‍💼
+```bash
+# Clone the repository
+git clone https://github.com/nicolasgodineau/Business_card.git
+cd Business_card
 
-***
+# Install dependencies
+npm install
 
-# Carte de Visite Virtuelle
+# Start development server
+npm start
+```
 
-Bienvenue sur ma carte de visite virtuelle ! 
-Cette carte numérique regroupe toutes les informations nécessaires pour prendre contact avec moi et pour explorer mes réseaux sociaux. 
-Utilisant des technologies modernes, j'ai conçu cette carte pour offrir une expérience utilisateur fluide et professionnelle.
+The app will open at `http://localhost:3000`
 
-## Technologies Utilisées 🚀
+### Build for Production
 
-Ce projet a été développé en utilisant plusieurs technologies de pointe pour garantir un accès rapide et une présentation élégante. Voici quelques-unes des technologies clés que j'ai employées :
+```bash
+# Create optimized build
+npm run build
 
-- **React** : J'ai choisi React, un framework JavaScript moderne, pour construire l'interface de ma carte de visite virtuelle.
+# Create build + ZIP
+npm run build-and-zip
+```
 
-- **Material-UI (MUI)** : Pour garantir un aspect visuel soigné et une cohérence dans les composants de l'interface utilisateur, j'ai intégré Material-UI. Cela a grandement simplifié le processus de conception et a ajouté une touche de professionnalisme.
+## 📁 Project Structure
 
-- **i18next** : Ma carte de visite virtuelle prend en charge plusieurs langues grâce à i18next, une bibliothèque de gestion de la langue. Cela permet à un public international d'accéder à mes informations et de me contacter.
+```
+src/
+├── components/
+│   ├── Dropdown.jsx       # Instagram dropdown menu
+│   ├── LanguageSelect.jsx # Language switcher
+│   └── ModalContact.jsx   # Contact form modal
+├── lang/
+│   ├── en.json           # English translations
+│   └── fr.json           # French translations
+├── img/                   # Images and icons
+├── App.jsx               # Main component
+├── theme.js              # MUI theme configuration
+├── translation.js        # Translation logic
+└── index.js              # React entry point
+```
 
--  **Herotofu pour le formulaire de contact** : J'ai intégré Herotofu pour créer un formulaire de contact interactif.📬
+## 🔧 Available Scripts
 
-## Informations de Contact
+- `npm start` - Run development server
+- `npm build` - Create production build
+- `npm test` - Run tests
+- `npm run build-and-zip` - Build and compress for deployment
+
+## 📖 Setup & Deployment Guide
+
+For detailed instructions on setting up this project from scratch, see [SETUP.md](SETUP.md).
+
+## 🎯 Customization
+
+### Change Colors
+
+Edit `src/theme.js` to modify the Material-UI theme colors.
+
+### Update Links
+
+Edit the link URLs in `src/App.jsx` (search for `href=`).
+
+### Add/Edit Translations
+
+Modify `src/lang/en.json` and `src/lang/fr.json`.
+
+## 📝 License
+
+This project is personal and not licensed.
+
+---
+
+# 👋 Carte de Visite Virtuelle - Nicolas Godineau
+
+Bienvenue sur ma carte de visite virtuelle ! Cette carte numérique regroupe toutes les informations nécessaires pour prendre contact avec moi et explorer mes réseaux sociaux.
+
+## ✨ Fonctionnalités
+
+- 🌐 **Support Multi-langue** : Anglais & Français
+- 🎨 **Design Moderne** : Material-UI
+- 📱 **Responsive** : Mobile et bureau
+- 💬 **Formulaire de Contact** : Communication facile
+- 🔗 **Liens Sociaux** : LinkedIn, GitHub, Instagram, portfolio
+- ⚡ **Performance** : Build optimisé
+
+## 🚀 Technologies
+
+- **React 18** - Bibliothèque UI
+- **Material-UI (MUI)** - Composants
+- **i18next** - Gestion des langues
+- **React Hook Form** - Gestion formulaire
+- **Emotion** - Styling CSS-in-JS
+
+## 🔗 Liens
+
+- 🌍 **Site Web**: [nicolasgodineau.com](https://nicolasgodineau.com)
+- 📄 **CV Web**: [itsme.nicolasgodineau.com](https://itsme.nicolasgodineau.com)
+- 💼 **LinkedIn**: [/in/nicolasgodineau/](https://www.linkedin.com/in/nicolasgodineau/)
+- 🐙 **GitHub**: [github.com/nicolasgodineau](https://github.com/nicolasgodineau)
+- 📸 **Instagram Travel**: [@nicolasg_travel](https://www.instagram.com/nicolasg_travel/)
+- 📸 **Instagram Portrait**: [@nicolasg_portrait](https://www.instagram.com/nicolasg_portrait/)
+
+## 🚀 Démarrage Rapide
+
+### Prérequis
+
+- Node.js 14+
+- npm ou yarn
+
+### Installation
+
+```bash
+# Cloner le repository
+git clone https://github.com/nicolasgodineau/Business_card.git
+cd Business_card
+
+# Installer les dépendances
+npm install
+
+# Démarrer le serveur de développement
+npm start
+```
+
+L'app s'ouvrira à `http://localhost:3000`
+
+### Compiler pour Production
+
+```bash
+# Créer une build optimisée
+npm run build
+
+# Créer une build + ZIP
+npm run build-and-zip
+```
+
+## 📁 Structure du Projet
+
+```
+src/
+├── components/
+│   ├── Dropdown.jsx       # Menu déroulant Instagram
+│   ├── LanguageSelect.jsx # Sélecteur de langue
+│   └── ModalContact.jsx   # Formulaire de contact
+├── lang/
+│   ├── en.json           # Traductions anglaises
+│   └── fr.json           # Traductions françaises
+├── img/                   # Images et icônes
+├── App.jsx               # Composant principal
+├── theme.js              # Configuration thème MUI
+├── translation.js        # Logique de traduction
+└── index.js              # Point d'entrée React
+```
+
+## 🔧 Scripts Disponibles
+
+- `npm start` - Lancer le serveur de développement
+- `npm build` - Créer une build production
+- `npm test` - Lancer les tests
+- `npm run build-and-zip` - Build et compression
+
+## 📖 Guide de Configuration
+
+Pour des instructions détaillées sur la configuration de ce projet, consultez [SETUP.md](SETUP.md).
+
+## 🎯 Personnalisation
+
+### Changer les Couleurs
+
+Modifiez `src/theme.js` pour changer les couleurs du thème Material-UI.
+
+### Mettre à Jour les Liens
+
+Modifiez les URLs dans `src/App.jsx` (cherchez `href=`).
+
+### Ajouter/Éditer des Traductions
+
+Modifiez `src/lang/en.json` et `src/lang/fr.json`.
+
+## 📝 Licence
+
+Projet personnel, non licencié.
 
 Vous trouverez ci-dessous toutes les informations pour prendre contact avec moi et pour explorer mes réseaux sociaux :
 

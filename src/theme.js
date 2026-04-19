@@ -3,6 +3,7 @@ import { createTheme } from "@mui/material";
 const theme = createTheme({
     typography: {
         fontFamily: "Lato, sans-serif", // Police par défaut
+        fontFamilyPoiretOne: "Poiret One, cursive",
         fontWeightRegular: 300,
     },
     spacing: 8,
